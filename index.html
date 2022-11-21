@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* CSS GENERAL STRUCTURE */
+html { 
+    font-size: 100%;
+}
+
+/* CSS RESET */
+
+/* GLOBAL STYLES */
+
+body {
+    font-family:'Manrope', sans-serif;
+    /* margin: 10px 80px; */
+    background-color: #FCF9F9;
+    /*color: #fafafa;*/
+}
+
+main {
+    background-color: #FCF9F9;
+    width: 100%;
+    display: flex;
+    /* padding: 0;
+    margin: 0px 60px; */
+}
+
+section {
+    background-color: #FCF9F9;
+    box-sizing:content-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /*height: 600px;*/
+    /*border-style:dotted;*/
+    /*border-width: 2px;*/
+    /*border-color:rgb(63, 59, 59);*/
+    /* padding: 20px; */
+    margin: 50px;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+}
+h1 {
+    color: #F79256;
+    /*font-size: 5em;  /* Relative unit */
+    font-size: 75px;
+    /* rem - srespond to the root element */
+    padding: 0%;
+}
+
+h2 {
+    /*font-size: 2.5em;*/
+    font-size: 40px;
+    color: #132A25;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 25px;
+    color: #218B8B;
+}
+
+p {
+    font-size: 1em;
+}
+
+
+/* HEADER AND MAIN NAVIGATION */
+
+nav {
+    background-color: #FCF9F9;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+    overflow: hidden;
+    /* align-items: center; */
+  
+}
+
+
+ul.nav-links {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  margin-right: 1em;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FCF9F9;
+}
+
+ul.nav-links li {
+  float: left;
+}
+
+.nav-links li a {
+  display: block;
+  color: #16302B;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  margin-top: 1.5em;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+}
+
+/*
+
+nav ul li a {
+    display: block;
+    padding: .5em 1em;
+    margin: .5em;
+    text-decoration: none;
+    color: #16302B;
+    /*float: right;*/
+/*}*/
+
+/* .nav-links {
+  
+  display: flex;
+
+  justify-content: space-around;
+
+  width: 30%;
+
+  float: right;
+
+} */
+
+.nav-links li a:hover {
+    background-color: #F79256;
+    color:#FCF9F9
+}
+
+.nav-logo-left {
+    flex: 1 1 200px;
+    list-style: none;
+    margin-top: 2em;
+    margin-left: 3em;
+    padding: 0;
+}
+
+ul.nav-linkedin-right {
+    list-style: none;
+    float: right;
+    padding: .5em;
+    margin-top: 2.5em;
+    margin-right: 4em;
+    margin-left: 0;
+}
+
+/*li {
+    float: left;
+}*/
+
+/*li a {
+    text-align: center;
+}*/
+
+/*.active {
+    float: right;
+}
+
+*/
+
+/* LAYOUT */
+
+
+main section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main section ul li a {
+    display: block;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+main .left-section {
+    box-sizing:content-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 60px;
+    padding: 0;
+}
+
+main .left-section h1 {
+    margin-bottom: .3em;
+    /* font-size: ; */
+}
+
+main .left-section h2 {
+    margin-top: 0;
+    margin-bottom: .1em;
+    font-weight: 400;
+}
+
+main .left-section h4 {
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+/* main .left-section .name {
+    margin: 0;
+    padding: 0;
+}
+
+main .left-section .role {
+    margin: 0;
+    padding: 0;
+} */
+
+main .left-section .view-my-work {
+    display: block;
+    margin: 0 0 2em 0;
+    padding: 0;
+}
+
+main .left-section .view-my-work a:link {
+    color: #96A13A;
+    font-weight: bolder;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+main .left-section .view-my-work a:hover {
+    color: #96A13A;
+    font-weight: bolder;
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+main .left-section .view-my-work a:visited {
+    color: #96A13A;
+}
+
+main .left-section .view-resume {
+    display: block;
+    margin: 0 0 2em 0;
+    padding: 0;
+}
+
+main .left-section .view-resume a:link{
+    color: #96A13A;
+    font-weight: bolder;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+main .left-section .view-resume a:hover{
+    color: #96A13A;
+    font-weight: bolder;
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+main .left-section .view-resume a:visited {
+    color: #96A13A;
+}
+
+/* main .right-section {
+    box-sizing:content-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} */
+
+.home-pic {
+    width: 10px;
+    padding: 0;
+    margin: 2em 0 3em 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: #F79256;
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer p {
+    color:#FCF9F9;
+}
+
+
+
+
+/* PAGE SPECIFIC */
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:420px) {
+    main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    width: 100%;
+    display: grid;
+    /*grid-template-rows: 1fr;*/
+    flex-direction: row;
+}
+}
+
+@media screen and (min-width:768px) {
+    main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+}
+
+@media screen and (min-width:1366px) {
+    main {
+    width: 100%;
+    display: flex;
+}
+
+div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    flex-direction: row;
+}
+}
+
+</style>
+
+<body>
+
+<header>
+
+<!--use flex box for nav bar-->
+<nav>
+
+    
+        <!-- <div class="nav-logo-left">
+        <a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="83px"></a>
+        </div> -->
+        <ul class="nav-logo-left">
+        <li><a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="83px"></a>
+        </ul>
+        <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <ul class="nav-linkedin-right">
+        <li><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/TKcDh09/orange-linkedin.png" alt="orange-linkedin" border="0" width="28px"></a></li>
+        </ul>
+        <!-- <div class="nav-linkedin-right">
+        <a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/TKcDh09/orange-linkedin.png" alt="orange-linkedin" border="0" width="28px"></a>
+        </div> -->
+    
+</nav>
+
+
+<!-- margin: 0%; padding: 1.5em;-->
+</header>
+
+<main> <!--SECTIONING ELEMENTS: div, table, main, header, footer, section, nav, sidebar, etc...-->
+
+<section class="left-section">
+    <!-- <div class="name"> -->
+    <h1>Abby Dunne</h1>
+    <!-- </div> -->
+    <!-- <div class="role"> -->
+    <h2>UX Design &<br>Developement</h2>
+    <!-- </div> -->
+    <h4>Boston, MA</h4>
+
+
+    <div class="view-my-work">
+        <a href="work.html">View my Work ></a>
+    </div>
+    <div class="view-resume">
+        <a href="resume.pdf">Resume ></a>
+    </div>
+    
+    <!-- <ul>
+    <li><a href="contact.html"><img src="https://i.ibb.co/MCwTsSy/main-contact-button.png" alt="main-contact-button" border="0" width="194px" padding=".5em" margin="1em"></a></li>
+    <li><a href="resume.pdf"><img src="https://i.ibb.co/kBkM6nP/main-resume-btn.png" alt="main-resume-btn" border="0" width="194px" padding=".5em" margin="1em"></a></li>
+    </ul> -->
+
+
+</section>
+
+<!-- <section class="right-section"> -->
+<section>
+<!--<section style="width: 400px;">-->
+    <div class="home-pic">
+    <img src="images/home_pic.jpg" alt="Home Graphic" border="0" style="height:40em">
+</div>
+</section>
+
+</main>
+
+<!-- <footer>
+    <ul>
+    <li><a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="137px" style="padding: 1em;"></a></li>
+    <li><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/GnV03mj/linkedin-white.png" alt="linkedin-white" border="0" width="46px"></a></li>
+</ul>
+
+<p>ald021@bucknell.edu</p>
+
+
+</footer> -->
+
+</body>
+
+</head>
+
+
+</html>
