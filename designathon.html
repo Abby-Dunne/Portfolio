@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     color: #F79256;
     /*font-size: 5em;  /* Relative unit */
-    font-size: 75px;
+    font-size: 3em;
     /* rem - srespond to the root element */
     padding: 0%;
 }
@@ -81,6 +81,13 @@ p {
     font-size: 1em;
 }
 
+.project-header {
+    color: #F79256;
+    font-size: 55px;
+    text-align: left;
+    font-style: italic;
+    margin-left: 100px;
+}
 
 /* HEADER AND MAIN NAVIGATION */
 
@@ -212,12 +219,12 @@ main .left-section .role {
         margin-left: 100px;
         margin-right: 100px;
         /* text-align: center; */
-        background-color: #F79256;
+        /* background-color: #F79256; */
         display: grid;
-        grid-template-rows: repeat(4, 1fr);
+        /* grid-template-rows: repeat(4, 1fr); */
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
-        background-color: aquamarine;
+        /* background-color: aquamarine; */
         /* align-items: center; */
         gap: 8px;
         
@@ -234,8 +241,13 @@ main .left-section .role {
 } */
 
 .row-item {
-    background-color: #218B8B;
+    /* background-color: #218B8B; */
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+}
 
+.row-item p {
+    font-size: 23px;
 }
 
 /* .grow1 { 
@@ -251,7 +263,38 @@ main .left-section .role {
 
 .column-item {
     background-color: #F79256;
+    grid-template-columns: 1fr 1fr;
 }
+
+.img-center {
+    display: block;
+    text-align: center;
+}
+
+.bullet-styling ul { 
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+} /* Remove default bullets */
+
+.bullet-styling li {
+    font-size: 23px;
+    padding-right: 40px;
+    /* line-height: 30px; */
+    margin-bottom: 25px;
+}
+
+.bullet-styling li::before {
+    font-family: 'Font Awesome 5 Free';
+    /* content: "\f35a"; */
+    /* content: "\25B7"; */
+    /* content: "\2970"; */
+    content: "\27B2";
+    color: #F79256;
+	
+    margin-right: 10px; /* Optional tweak */
+}
+
 
 /* FOOTER */
 footer {
@@ -300,7 +343,8 @@ div {
 div {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
 }
 }
 
@@ -313,7 +357,8 @@ div {
 div {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
     flex-direction: row;
 }
 }
@@ -353,20 +398,76 @@ div {
 <!-- margin: 0%; padding: 1.5em;-->
 </header>
 
+<!-- <h3 class="project-header">Designathon</h3> -->
+<div class="project-header">
+Designathon
+</div>
+
 <main> <!--SECTIONING ELEMENTS: div, table, main, header, footer, section, nav, sidebar, etc...-->
+
 
 <div class="main-container">
     <!-- <div class="four-rows"> -->
         <div class="row-item">
-            <h3>ROLE: <p>website designer</p></h3>
-            <h3>TEAM: 3 students</h3>
-             <h3>COMPANY: FreeLittleArtGalleries of the Susquehanna Valley</h3>
-            <br> <h3>GOAL: In a two-week design sprint, help Union County Connect get ready to launch their three FLAGS (Free Little Art Galleries) in the Susquehanna Valley, by proposing branding and logo, a landing page with informational content about the FLAGS, and informational and promotional materials for print and social media.</h3>
+            <p><b>ROLE:</b> website designer <br><br> <b>TEAM:</b> 3 students<br><br> <b>COMPANY:</b> FreeLittleArtGalleries of the Susquehanna Valley</p>
+            <img src="./images/FLAG_intro_pic1.png" style="width:100%; margin: 20px 0px">
+            <!-- <div> </div> -->
+            <p><b>GOAL:</b> In a two-week design sprint, help Union County Connect get ready to launch their three FLAGS (Free Little Art Galleries) in the Susquehanna Valley, by proposing branding and logo, a landing page with informational content about the FLAGS, and informational and promotional materials for print and social media.</p>
+            <!-- <h3>TEAM: 3 students</h3>
+             <h3>COMPANY: FreeLittleArtGalleries of the Susquehanna Valley</h3> -->
+            <!-- <h3>GOAL: In a two-week design sprint, help Union County Connect get ready to launch their three FLAGS (Free Little Art Galleries) in the Susquehanna Valley, by proposing branding and logo, a landing page with informational content about the FLAGS, and informational and promotional materials for print and social media.</h3> -->
 
         </div>
-        <div class="row-item">PROCESS</div>
-        <div class="row-item">OUTCOME</div>
-        <div class="row-item">CHALLENGES <br> SKILLS I GAINED</div>
+        <div class="row-item">
+            <h2>Process</h2>
+            <p>Our web design class and marketing class collaborated to tackle the deliverables for the project.</p>
+            <p>Divided into teams of 3, each team of 3 was to come up with a logo/brand colors, landing page design, and promotional material, and then we would all choose the final one for each. My specific role was to design the wireframes of the landing page and later apply the final chosen logo and colors.</p>
+            <p>Without much time to do critical steps of the design process such as user research, iterative ideation, user testing, etc, we had to make assumptions, move fast, and get a proposal out in two weeks.</p>
+            
+           <div class="img-center"><img src="./images/FLAG_process_pic3.png" style="width: 50%"></div>
+            
+            <p>Since this was the logo and colors my team came up with, I used them for our landing page proposal and went straight to making high-fidelity wireframes in AdobeXD. I decided the most important information when a user would arrive at the page was to guide them to which town they wanted information on, so I put clickable cards, whether it would just scroll down the page upon clicking or take them to a separate page. </p>
+            <p>We didn’t have much information to work with, but we had one day where the client gave us feedback during the working stages. Since they believed the audience was an older and less tech savvy crowd, they wanted the navigation to be as simple as possible with minimal clicks. With that said, I adjusted my design to have the information all on one page and viewable upon scrolling.</p>
+            <div class="img-center">
+                <img src="./images/FLAG_process_pic4.png" style="width: 10%; vertical-align: top; margin-right: 1em;;">
+                <img src="./images/FLAG_process_pic5.png" style="width: 10%">
+            </div>
+            <p>After messing around with the colors–even with a white background–I knew this color scheme was not right. 
+                I believe the branding was going for something more cheery, and the dark green was not giving that. When the teams presented their logos, this logo was voted to be chosen:</p>
+            <div class="img-center"><img src="./images/FLAG_process_pic6.png" style="width:40%"></div>
+            <p> I then applied the color scheme and logo to my landing page in-progress, and it totally clicked with the look, giving it a much more cheery, refreshing and clean look.</p>
+            <div class="img-center"><img src="./images/FLAG_process_pic7.png" style="width:20%">
+            <img src="./images/FLAG_process_pic8.png" style="width: 20%"></div>
+            <p>I still kept a few different layout choices for the organizer to decide.</p>
+            <img src="./images/FLAG_process_pic9.png" style="width:100%">
+        </div>
+        <div class="row-item">
+            <h2>Outcome</h2>
+            <p>Ultimately, they chose my wireframes for the final proposal. The branding, landing page designs were handed-off to the organizer to use and adjust as needed, and our job was done. </p>
+            <p style="font-style:italic; font-size: 20px">I was waiting to see if my designs got used at all, and when I saw they eventually got a website deployed and up, I was happy to see aspects of my design included in the final landing page, such as layout choices, information, and even some of the content including the “How It Works” section , with “follow the story,” and other headings.</p>
+            <p style="font-style:italic; font-size: 20px">Here is the final website: <a href="https://www.freelittleartgalleriessv.org/" target="_blank" rel="noopener noreferrer">https://www.freelittleartgalleriessv.org/</a></p>
+        </div>
+        <div class="row-item">
+            <div class="two-columns">
+                <div class="bullet-styling">
+            <ul>
+                <p><b>CHALLENGES</b></p>
+                <li>Time constraints: getting all of the deliverables done in two weeks was difficult, and it meant that not everything was going to be perfect and we had to rush the design process and skip steps.</li>
+                <li>Working with a team and making design decisions together is not always easy when everyone has different opinions on what we think looks best. When you're not basing designs off of user research and using that as reasoning, you may have to do some negotiating and keep an open mind to work as a team.</li>
+            </ul>
+            <!-- <p> - Time constraints: getting all of the deliverables done in two weeks was difficult, and it meant that not everything was going to be perfect and we had to rush the design process and skip steps.
+            <br> - Working with a team and making design decisions together is not always easy when everyone has different opinions on what we think looks best. When you're not basing designs off of user research and using that as reasoning, you may have to do some negotiating and keep an open mind to work as a team. </p> -->
+            </div>
+            <div class="bullet-styling">
+                <ul>
+                    <p><b>SKILLS I GAINED</b></p>
+                    <li>Strict deadlines are helpful in actually getting a product out as soon as possible and taking actionable steps. When you have plenty of time, it may never get done or you spend too long tinkering with designs</li>
+                    <li>Get as much information as possible before you do too much work</li>
+                    <li>What you think is best may not be best for the target users at hand</li>
+                </ul>
+            </div>
+            </div>
+        </div>
     <!-- </div> -->
 </div>
 
