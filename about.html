@@ -32,15 +32,16 @@ main {
     display: flex;
 }
 
-section {
+/* section {
     background-color: #FCF9F9;
     box-sizing:content-box;
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* padding: 20px;  */
+    padding: 20px; 
     margin: 50px;
-}
+} */
+
 
 /* TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
@@ -57,6 +58,7 @@ h1 {
 
 h2 {
     font-size: 2em;
+    color: #132A25
     /* font-size: 40px;
     color: #132A25; */
 }
@@ -68,6 +70,17 @@ h3 {
 h4 {
     font-size: 25px;
     color: #218B8B;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+    /* color: #132A25; */
+    color: #104242;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 8px;
+    margin-top: 0px;
 }
 
 p {
@@ -157,32 +170,101 @@ ul.nav-linkedin-right {
 
 /* Create three equal columns that floats next to each other */
 
-.column {
-  float: left;
-  width: 35%;
-  padding: 15px;
+
+
+.about-container {
+    margin-left: 100px;
+    margin-right: 100px;
+
 }
 
 .row {
-    align-items: center;
-    padding: 15px;
-    margin: 5%;
+    display: grid;
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: 1fr 2fr;
+    /* gap: 40px; */
 }
 
+.column {
+    /* grid-template-columns: 1f 2fr; */
+    /* gap: 40px; */
+    column-gap: 40px;
+}
+
+@media screen and (max-width:420px) {
+    main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.row {
+    display: grid;
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: 1fr;
+    /* gap: 40px; */
+}
+
+.column {
+    /* grid-template-columns: 1f 2fr; */
+    /* gap: 40px; */
+    column-gap: 40px;
+    margin-left: 30px;
+}
+
+}
+
+@media screen and (max-width:768px) {
+    main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.row {
+    display: grid;
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: 1fr;
+    /* gap: 40px; */
+}
+
+.column {
+    /* padding-right:20px; */
+    gap: 10%;
+    margin-left: 30px;
+}
+
+}
+
+@media screen and (max-width:1366px) {
+    main {
+    width: 100%;
+    display: flex;
+}
+
+/* .row {
+    grid-template-columns: 1fr;
+  } */
+}
 
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
+/* @media screen and (max-width:600px) {
   .column {
     width: 100%;
   }
-}
+
+} */
+
+/* .row {
+    grid-template-columns: 1fr;
+  } */
 
 /*FOOTER*/
 footer {
@@ -236,43 +318,72 @@ footer p {
 </nav>
 
 </header>
+<h1 style="margin-left: 100px">About Me</h1>
+<div style="margin: 0 80px 30px 100px; font-size: 25px;">Hello! I am passionate about harnessing both my computer science background and design experience to create successful solutions and digital products. I am eager to keep learning and growing skills in both disciplines!
+</div>
 
 <main> <!--SECTIONING ELEMENTS: div, table, main, header, footer, section, nav, sidebar, etc...-->
 
-
-<section style="margin-left: 100px; margin-right: 100px;">
+<!-- <section style="margin-left: 200px; margin-right: 200px;"> -->
 <!--<section style="width: 400px;">-->
     <!--<a href="https://imgbb.com/"><img src="https://i.ibb.co/N1PvtR4/wf-about-me.png" alt="wf-about-me" border="0"></a>-->
 
-    <h1>About Me</h1>
-
+    <div class="about-container">
       <div class="row">
-        <!-- <div>Hello! I am passionate about harnessing both my computer science background and design experience to create successful solutions and digital products. I am eager to keep learning and growing skills in both disciplines!
-        </div> -->
         <div class="column">
-            <img src="images/about_me_pic.jpeg" alt="about-me-pic" border="0" width="300">
-        </div>
-        
-        <div class="column">
-          <h2>Education</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-          <h2>Experience</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-        </div>
-        
-        <div class="column">
-          <h2>Skills</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-          <h2>Courses</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-        </div>
+            <img src="images/about_me_pic.jpeg" alt="about-me-pic" border="0" width="300" style="margin-top: 20px;">
 
+            <h2>Education</h2>
+            <p>Bucknell University ‘23 <br>
+              Computer Science</p>
+              <!-- <h2>Skills</h2>
+              <p>Figma  •  AdobeXD  •  css  •  html  •  javascript  •  React.js  •  Next.js  •  Canva  •  AdobePS  • Git  •  Tableau  •  Auto-Cad  •  Java  •  Python  •  R  •  C  •   Linux  •  RISC-V
+            </p> -->
+
+        </div>
+        <div class="column">
+            <h2>Experience</h2>
+          <h5><b>Entic Edge, UX Design and Software Development Intern, Summer 2022 </b></h5> 
+           <h5><b>Entic Edge, UX/UI Design Intern, Summer 2021</b></h5> 
+          <p style="margin-bottom: 30px;">I’ve had the privilege of working at Entic Edge as an intern the past two years contributing to both client and internal projects. With the company’s focus on value proposition strategy and company alignment, I observed the crossovers between the field of marketing and user experience design, which helped solidify my passion in UX. Being able to utilize my coding skills in my second year with the company, I saw the importance of alignment between the design and development stages.
+        </p>
+        <h5><b>Store Associate, Merrell / Nautica, 2017-2021</b></h5>
+        </p>
+        <p>Working in retail for 4 years, I developed interpersonal, communication and problem-solving skills. I used product knowledge to aid customers in finding the right product depending on their needs. I also built customer loyalty by greeting, answering questions and resolving disputes.
+            Used product knowledge to aid customers in finding the right product depending on their needs. I built customer loyalty by greeting, answering questions and resolving disputes. I developed interpersonal, communication and problem-solving skills.
+            </p>
+        <!-- <h2>Courses</h2>
+        <p>• Fundamentals of Web Design • Computer Science Design Project  • Human Computer Interaction  •  Introduction to Psychology  •  Principles of Marketing   •  Operating Systems Design  •  Design & Analysis of Algorithms  •  Computer Organization  •  Software Engineering & Design  • Introduction to Data Science  •  Data Structures & Algorithms  •  Computers and Society  •  Evolution of Digital Media  •  Statistics and Engineering  •  Drawing I   •  Calculus I, II, III   •  Engineering Graphics  •  Sustainability Principles for Engineers  •  Discrete Structures
+        </p> -->
+        </div>
+        <div class="column"> 
+            <!-- <h2>Education</h2>
+            <p>Bucknell University ‘23 <br>
+              Computer Science</p> -->
+              <h2>Skills</h2>
+              <p>CSS  •  HTML  •  Javascript  •  React.js <br>Next.js  •  Git  •  Java  •  Python  •  R  •  C <br>  Figma  •  AdobeXD  •  Canva  •  AdobePS  <br>Linux  •  RISC-V  •  Tableau  •  Auto-Cad 
+            </p>
+            </div>
+        
+        <div class="column">
+          <h2>Courses</h2>
+          <p>• Fundamentals of Web Design • Computer Science Design Project  • Human Computer Interaction  •  Introduction to Psychology  •  Principles of Marketing   •  Operating Systems Design  •  Design & Analysis of Algorithms  •  Computer Organization  •  Software Engineering & Design  • Introduction to Data Science  •  Data Structures & Algorithms  •  Computers and Society  •  Evolution of Digital Media  •  Statistics and Engineering  •  Drawing I   •  Calculus I, II, III   •  Engineering Graphics  •  Sustainability Principles for Engineers  •  Discrete Structures
+        </p>
+        </div>
         <div class="column">
             <h2>Values</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            <p>Hardwork <br>respect <br>kindness <br>creativity</p>
           </div>
+        <div class="column">
+            <h2>Extra-curricular</h2>
+            <p>Bucknell University NCAA Division I Track & Field</p>
+            <p>• Multi-event (Pentathlon & Heptathlon)  / 400 hurdler</p>
+            <p>From early September to May, I train for 5-7 events, with practice and lift year-round, and competition meets in the winter and spring months on weekends. Track has been a significant part of my college experience. I’ve formed life-long friendships,  gained time-management skills, and it allowed me to continue my passion and love for track (of which I’ve had since middle school) into my college years.
+            </p>
+        </div>
+        </div>
       </div>
-</section>
+<!-- </section> -->
 
 
 </main>
