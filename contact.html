@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Contact Page</title>
+    <title>Contact Me</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -23,7 +23,7 @@ html {
 
 body {
     font-family:'Manrope', sans-serif;
-    /*color: #fafafa;*/
+    background-color: #FCF9F9;
 }
 
 main {
@@ -38,11 +38,7 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /*height: 600px;*/
-    /*border-style:dotted;*/
-    /*border-width: 2px;*/
-    /*border-color:rgb(63, 59, 59);*/
-    padding: 20px; 
+    /* padding: 20px; */
     margin: 50px;
 }
 
@@ -52,65 +48,213 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     color: #F79256;
-    font-size: 3em;  /* Relative unit */
+    /*font-size: 5em;  /* Relative unit */
+    font-size: 3em;
+    font-weight: 500;
     /* rem - srespond to the root element */
+    /* padding: 0%; */
+    margin-bottom: 0;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 40px;
+    color: #132A25;
 }
 
 h3 {
     font-size: 1.75em;
-    align-content: center;
+}
+
+h4 {
+    font-size: 25px;
+    color: #218B8B;
+    font-weight: 100;
 }
 
 p {
     font-size: 1em;
 }
 
+.project-header {
+    color: #F79256;
+    font-size: 55px;
+    text-align: left;
+    font-style: italic;
+    margin-left: 100px;
+}
+
 /* HEADER AND MAIN NAVIGATION */
+
 nav {
     background-color: #FCF9F9;
     width: 100%;
     display: flex;
-}
-nav ul {
-    margin: 0;
-    padding: 1em;
-    list-style-type: none;
-    display: flex; 
-    justify-content: center;
-    background-color: #FCF9F9;
-    float: left;
+    /* justify-content: space-around; */
+    overflow: hidden;
+    /* align-items: center; */
 }
 
-nav ul li a {
-    display: block;
-    /*border: 1px solid;*/
-    padding: .5em 1em;
-    margin: .5em;
-    text-decoration: none;
-    color: #16302B;
-    float: left;
+
+ul.nav-links {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  margin-right: 1em;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FCF9F9;
 }
 
-nav ul li a:hover {
+ul.nav-links li {
+  float: left;
+}
+
+.nav-links li a {
+  display: block;
+  color: #16302B;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  margin-top: 1.5em;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+}
+
+.nav-links li a:hover {
     background-color: #F79256;
     color:#FCF9F9
 }
 
+.nav-logo-left {
+    flex: 1 1 200px;
+    list-style: none;
+    margin-top: 2em;
+    margin-left: 3em;
+    padding: 0;
+}
+
+ul.nav-linkedin-right {
+    list-style: none;
+    float: right;
+    padding: .5em;
+    margin-top: 2.5em;
+    margin-right: 4em;
+    margin-left: 0;
+}
 
 /* LAYOUT */
 
-a:link {
-    color:#16302B;
+
+main section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
+main section ul li a {
+    display: block;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+.main-container {
+        /* width: 80%; */
+        /* width: calc(100% - 200px); */
+        margin-left: 100px;
+        margin-right: 100px;
+        /* text-align: center; */
+        /* background-color: #F79256; */
+        display: grid;
+        /* grid-template-rows: repeat(4, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        /* background-color: aquamarine; */
+        /* align-items: center; */
+        gap: 8px;
+        
+}
+
+.row-item {
+    /* background-color: #218B8B; */
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+}
+
+.row-item p {
+    font-size: 23px;
+}
+
+.two-columns {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column-item {
+    background-color: #F79256;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-center {
+    display: block;
+    text-align: center;
+}
+
+.bullet-styling ul { 
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+} /* Remove default bullets */
+
+.bullet-styling li {
+    font-size: 23px;
+    padding-right: 40px;
+    /* line-height: 30px; */
+    margin-bottom: 25px;
+}
+
+.bullet-styling li::before {
+    font-family: 'Font Awesome 5 Free';
+    /* content: "\f35a"; */
+    /* content: "\25B7"; */
+    /* content: "\2970"; */
+    content: "\27B2";
+    color: #F79256;
+	
+    margin-right: 10px; /* Optional tweak */
+}
+
+/* .contact-links {
+    display: block;
+    margin: 0 0 2em 0;
+    padding: 0;
+} */
+
+.contact-links a:link {
+    color: #96A13A;
+    font-weight: bold;
+    font-size: 45px;
+    text-decoration: none;
+    transition: .1s ease-in-out 0s;
+}
+
+.contact-links a:hover {
+    color: #96A13A;
+    font-weight: bold;
+    font-size: 47px;
+    text-decoration: none;
+}
+
+.contact-links a:visited {
+    color: #96A13A;
+}
+
+
 
 /* FOOTER */
 footer {
     background-color: #F79256;
-    width: 100%;
+    width: 100% !important;
     display: flex;
     flex-direction: row;
 }
@@ -122,6 +266,8 @@ footer ul li {
 footer p {
     color:#FCF9F9;
 }
+
+
 
 /* PAGE SPECIFIC */
 
@@ -152,7 +298,8 @@ div {
 div {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
 }
 }
 
@@ -165,7 +312,8 @@ div {
 div {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
     flex-direction: row;
 }
 }
@@ -178,51 +326,76 @@ div {
 
 <!--use flex box for nav bar-->
 <nav>
-    <ul>
-        <a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="83px" style="float:left; margin: 0%; padding-left: 1.5em; padding-right: 1.5em;" ></a>
-        <li><a href="design_work.html">DESIGN</a></li>
-        <li><a href="coding_projects.html">CODING</a></li>
+
+    
+        <!-- <div class="nav-logo-left">
+        <a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="83px"></a>
+        </div> -->
+        <ul class="nav-logo-left">
+        <li><a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="83px"></a>
+        </ul>
+        <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK</a></li>
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="contact.html">CONTACT</a></li>
     </ul>
-
-    <ul style="float: right;">
-        <li><a class="active" href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/TKcDh09/orange-linkedin.png" alt="orange-linkedin" border="0" width="28px"></a></li>
-    </ul>
+    <ul class="nav-linkedin-right">
+        <li><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/TKcDh09/orange-linkedin.png" alt="orange-linkedin" border="0" width="28px"></a></li>
+        </ul>
+        <!-- <div class="nav-linkedin-right">
+        <a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/TKcDh09/orange-linkedin.png" alt="orange-linkedin" border="0" width="28px"></a>
+        </div> -->
+    
 </nav>
 
+
+<!-- margin: 0%; padding: 1.5em;-->
 </header>
+
+
+<!-- <div class="project-header">
+Contact Me
+</div> -->
 
 <main> <!--SECTIONING ELEMENTS: div, table, main, header, footer, section, nav, sidebar, etc...-->
 
 
-<section>
+<div class="main-container">
 
-    <h1>Contact Me</h1>
-    
-    <h3>Email:</h3>
-    <p>ald021@bucknell.edu</p>
-    
-    <h3><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn">LinkedIn ></a></h3>
 
-    <h3><a href="https://bucknell.joinhandshake.com/stu/users/24372737" >Handshake ></a></h3>
 
-    <h3><a href="resume.pdf" >Resume ></a></h3>
+        <h1>Contact Me</h1>
+        <!-- <div class="img-center"> -->
+            
+        <div class="contact-links" style="text-align: center; ">
+            <h4 style="font-weight:100">Email:  ald021@bucknell.edu</h4>
 
-</section>
+            <h3><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn">LinkedIn ></a></h3>
+        
+            <h3><a href="https://bucknell.joinhandshake.com/stu/users/24372737" >Handshake ></a></h3>
+        
+            <h3><a href="resume-updated-12-24.pdf" >Resume ></a></h3>
+            </div>
+       
+             
+            </div>
+        </div> -->
+    <!-- </div> -->
+</div>
 
 </main>
 
-<footer>
+<!-- <footer>
     <ul>
     <li><a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="137px" style="padding: 1em;"></a></li>
-    <li style="float:right"><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/GnV03mj/linkedin-white.png" alt="linkedin-white" border="0" width="46px"></a></li>
+    <li><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/GnV03mj/linkedin-white.png" alt="linkedin-white" border="0" width="46px"></a></li>
 </ul>
 
 <p>ald021@bucknell.edu</p>
 
 
-</footer>
+</footer> -->
 
 </body>
 
