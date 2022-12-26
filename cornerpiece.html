@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cornerpiece® Web app</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* CSS GENERAL STRUCTURE */
+html { 
+    font-size: 100%;
+}
+
+/* CSS RESET */
+
+/* GLOBAL STYLES */
+
+body {
+    font-family:'Manrope', sans-serif;
+    background-color: #FCF9F9;
+}
+
+main {
+    background-color: #FCF9F9;
+    width: 100%;
+    display: flex;
+}
+
+section {
+    background-color: #FCF9F9;
+    box-sizing:content-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+    margin: 50px;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+}
+h1 {
+    color: #F79256;
+    /*font-size: 5em;  /* Relative unit */
+    font-size: 3em;
+    /* rem - srespond to the root element */
+    padding: 0%;
+}
+
+h2 {
+    font-size: 40px;
+    color: #132A25;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 25px;
+    color: #218B8B;
+}
+
+p {
+    font-size: 1em;
+}
+
+.project-header {
+    color: #F79256;
+    font-size: 55px;
+    text-align: left;
+    font-style: italic;
+    margin-left: 100px;
+}
+
+/* HEADER AND MAIN NAVIGATION */
+
+nav {
+    background-color: #FCF9F9;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+    overflow: hidden;
+    /* align-items: center; */
+}
+
+
+ul.nav-links {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  margin-right: 1em;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FCF9F9;
+}
+
+ul.nav-links li {
+  float: left;
+}
+
+.nav-links li a {
+  display: block;
+  color: #16302B;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  margin-top: 1.5em;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+}
+
+.nav-links li a:hover {
+    background-color: #F79256;
+    color:#FCF9F9
+}
+
+.nav-logo-left {
+    flex: 1 1 200px;
+    list-style: none;
+    margin-top: 2em;
+    margin-left: 3em;
+    padding: 0;
+}
+
+ul.nav-linkedin-right {
+    list-style: none;
+    float: right;
+    padding: .5em;
+    margin-top: 2.5em;
+    margin-right: 4em;
+    margin-left: 0;
+}
+
+/* LAYOUT */
+
+
+main section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main section ul li a {
+    display: block;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+.main-container {
+        /* width: 80%; */
+        /* width: calc(100% - 200px); */
+        margin-left: 100px;
+        margin-right: 100px;
+        /* text-align: center; */
+        /* background-color: #F79256; */
+        display: grid;
+        /* grid-template-rows: repeat(4, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        /* background-color: aquamarine; */
+        /* align-items: center; */
+        gap: 8px;
+        
+}
+
+.row-item {
+    /* background-color: #218B8B; */
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+}
+
+.row-item p {
+    font-size: 23px;
+}
+
+.two-columns {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column-item {
+    background-color: #F79256;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-center {
+    display: block;
+    text-align: center;
+}
+
+.bullet-styling ul { 
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+} /* Remove default bullets */
+
+.bullet-styling li {
+    font-size: 23px;
+    padding-right: 40px;
+    /* line-height: 30px; */
+    margin-bottom: 25px;
+}
+
+.bullet-styling li::before {
+    font-family: 'Font Awesome 5 Free';
+    /* content: "\f35a"; */
+    /* content: "\25B7"; */
+    /* content: "\2970"; */
+    content: "\27B2";
+    color: #F79256;
+	
+    margin-right: 10px; /* Optional tweak */
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #F79256;
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer p {
+    color:#FCF9F9;
+}
+
+
+
+/* PAGE SPECIFIC */
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:420px) {
+    main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    width: 100%;
+    display: grid;
+    /*grid-template-rows: 1fr;*/
+    flex-direction: row;
+}
+}
+
+@media screen and (min-width:768px) {
+    main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+div {
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+}
+}
+
+@media screen and (min-width:1366px) {
+    main {
+    width: 100%;
+    display: flex;
+}
+
+div {
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    flex-direction: row;
+}
+}
+
+</style>
+
+<body>
+
+<header>
+
+<!--use flex box for nav bar-->
+<nav>
+
+    
+        <!-- <div class="nav-logo-left">
+        <a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="83px"></a>
+        </div> -->
+        <ul class="nav-logo-left">
+        <li><a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="83px"></a>
+        </ul>
+        <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <ul class="nav-linkedin-right">
+        <li><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/TKcDh09/orange-linkedin.png" alt="orange-linkedin" border="0" width="28px"></a></li>
+        </ul>
+        <!-- <div class="nav-linkedin-right">
+        <a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/TKcDh09/orange-linkedin.png" alt="orange-linkedin" border="0" width="28px"></a>
+        </div> -->
+    
+</nav>
+
+
+<!-- margin: 0%; padding: 1.5em;-->
+</header>
+
+<!-- <h3 class="project-header">Designathon</h3> -->
+<div class="project-header">
+Cornerpiece® Web App
+</div>
+
+<main> <!--SECTIONING ELEMENTS: div, table, main, header, footer, section, nav, sidebar, etc...-->
+
+
+<div class="main-container">
+    <!-- <div class="four-rows"> -->
+        <div class="row-item">
+            <p><b>ROLE:</b>front-end developer and UX designer in MVP1<br><br> <b>TEAM:</b>other ux designer, scrum master/lead developer, CCO<br><br> <b>COMPANY:</b> EnticEdge (internal company product)</p>
+            <div class="img-center"><img src="./images/cornerpieceintro.png" style="width:70%"></div>
+            <!-- <div> </div> -->
+            <p><b>GOAL:</b>Take the company’s current Cornerpiece product (a digital document) and transform it into an interactive web app that each client can customize according to their company.</p>
+            <!-- <h3>TEAM: 3 students</h3>
+             <h3>COMPANY: FreeLittleArtGalleries of the Susquehanna Valley</h3> -->
+            <!-- <h3>GOAL: In a two-week design sprint, help Union County Connect get ready to launch their three FLAGS (Free Little Art Galleries) in the Susquehanna Valley, by proposing branding and logo, a landing page with informational content about the FLAGS, and informational and promotional materials for print and social media.</h3> -->
+
+        </div>
+        <div class="row-item">
+            <h2>Process</h2>
+            <p>1. Design and discuss different layouts for pages</p>
+            <p>I came in mid-way through the design phase, as the team had gone through a few different iterations of wireframes for different pages. The other UX designer and I were to finalize the layouts of the 7 vital web pages for MVP1 (Sign-on, Dashboard, Glossary, Targeted Messaging, Goals & Strategies, Toolbox, and Support). I spent time learning what the goal of those pages were and what was most important to prioritize.
+            </p>            
+           <div class="img-center"><img src="./images/cornerpieceprocess2.png" style="width: 50%"></div>
+            
+           <p>2. Sketch out certain pages</p>
+            <p>Most of the pages had some sort of initial design they had done already, but I had full reigns of creating the toolbox page. I sketched out several different ideas and versions, and also experienced in figma with those different layouts.
+            </p>
+            <div class="img-center"><img src="./images/cornerpieceprocess1.png" style="width: 50%"></div>
+            <p>3. Finalize desktop and mobile wireframes on figma “ready for dev” (Finalize colors, decide on layouts, and put in icons)</p>
+           <div class="img-center">
+                <img src="./images/cornerpieceprocess3.png" style="width: 50%;">
+            </div>
+            <p>We decided on final colors and fonts, added in all the icons once they were ready. For the mobile designs, I made some last minute changes to them such adding collapsible, accordion style tabs, a ux principle called progressive disclosure. We decided it would be best for the user to see all of the options first so they can decide which one they want to expand and see versus having to scroll to see the content they want.
+            </p>
+            <p>4. Learn react.js and develop 4 web pages using git / agile process</p>
+            <div class="img-center"><img src="./images/git-logo.png" style="width:20%">
+            <img src="./images/React-icon.svg.png" style="width: 20%"></div>
+            <p>Once the designs were finalized, I switched over to the development side. The lead developer created a repository and created several issues for me to tackle, mostly including creating components on the page since React is component-based. I did an initial read-up on what React was as I had never used it before, but most of the learning was on-the-fly as I started developing.
+            </p>
+        </div>
+
+
+        <div class="row-item">
+            <h2>Outcome</h2>
+            <p>I was able to contribute the 4 pages of the web app for MVP1 launch.</p>
+            <!-- <p style="font-style:italic; font-size: 20px">I was waiting to see if my designs got used at all, and when I saw they eventually got a website deployed and up, I was happy to see aspects of my design included in the final landing page, such as layout choices, information, and even some of the content including the “How It Works” section , with “follow the story,” and other headings.</p> -->
+            <!-- <p style="font-style:italic; font-size: 20px">Here is the final website: <a href="https://www.freelittleartgalleriessv.org/" target="_blank" rel="noopener noreferrer">https://www.freelittleartgalleriessv.org/</a></p> -->
+        </div>
+        <div class="row-item">
+            <div class="two-columns">
+                <div class="bullet-styling">
+            <ul>
+                <p><b>CHALLENGES</b></p>
+                <li>I had to quickly pick up using react.js and as well as sharpen my html/css skills, and there were definitely some learning curves but I got the hang of it eventually
+                </li>
+                <li>There were times when the wireframe designs would be complex implementations and did not make sense development-wise, so we had to adjust some of the designs. <i>For example, there was a tab system that would have a variable amount of tabs (possibly as high as 10). Since this feature would make it overcrowded, we had to consider a different way of displaying the categories. After discussion, the team and I decided a drop-down menu would be more suitable.
+                </i></li>
+            </ul>
+            <!-- <p> - Time constraints: getting all of the deliverables done in two weeks was difficult, and it meant that not everything was going to be perfect and we had to rush the design process and skip steps.
+            <br> - Working with a team and making design decisions together is not always easy when everyone has different opinions on what we think looks best. When you're not basing designs off of user research and using that as reasoning, you may have to do some negotiating and keep an open mind to work as a team. </p> -->
+            </div>
+            <div class="bullet-styling">
+                <ul>
+                    <p><b>SKILLS I GAINED / LESSONS</b></p>
+                    <li>learned new ux practices from other ux designers</li>
+                    <li>experience using react.js and sharpened my html/css skills</li>
+                    <li>using Github and an agile development process outside of an academic environment</li>
+                    <li><i>Really found my place in serving as a bridge between design and development; Because I knew a lot of what was focused on and talked about in the design process and the overall big picture of the app, when in the development process I could be there to clarify ideas and logistics, change designs or make decisions when things didn’t match up.</i></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+
+<!-- <div class="two-columns">
+                <div>ROLE TEAM COMPANY</div>
+                <div>GOAL</div> -->
+
+    <!-- <div class="main-row">
+        <p>hello</p>
+    </div>
+    <div class="main-row">
+        <p>hello</p>
+    </div>
+    <div class="main-row">
+        <p>hello</p>
+    </div>
+    <div class="main-row">
+        <p>hello</p>
+    </div>
+</div> -->
+
+</main>
+
+<!-- <footer>
+    <ul>
+    <li><a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="137px" style="padding: 1em;"></a></li>
+    <li><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/GnV03mj/linkedin-white.png" alt="linkedin-white" border="0" width="46px"></a></li>
+</ul>
+
+<p>ald021@bucknell.edu</p>
+
+
+</footer> -->
+
+</body>
+
+</head>
+
+
+</html>
