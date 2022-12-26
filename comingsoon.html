@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
+    <title>Contact Me</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,17 +23,13 @@ html {
 
 body {
     font-family:'Manrope', sans-serif;
-    /* margin: 10px 80px; */
     background-color: #FCF9F9;
-    /*color: #fafafa;*/
 }
 
 main {
     background-color: #FCF9F9;
     width: 100%;
     display: flex;
-    /* padding: 0;
-    margin: 0px 60px; */
 }
 
 section {
@@ -42,10 +38,6 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /*height: 600px;*/
-    /*border-style:dotted;*/
-    /*border-width: 2px;*/
-    /*border-color:rgb(63, 59, 59);*/
     /* padding: 20px; */
     margin: 50px;
 }
@@ -57,13 +49,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     color: #F79256;
     /*font-size: 5em;  /* Relative unit */
-    font-size: 75px;
+    font-size: 3em;
+    font-weight: 500;
     /* rem - srespond to the root element */
-    padding: 0%;
+    /* padding: 0%; */
+    margin-bottom: 0;
 }
 
 h2 {
-    /*font-size: 2.5em;*/
     font-size: 40px;
     color: #132A25;
 }
@@ -75,12 +68,20 @@ h3 {
 h4 {
     font-size: 25px;
     color: #218B8B;
+    font-weight: lighter;
 }
 
 p {
     font-size: 1em;
 }
 
+.project-header {
+    color: #F79256;
+    font-size: 55px;
+    text-align: left;
+    font-style: italic;
+    margin-left: 100px;
+}
 
 /* HEADER AND MAIN NAVIGATION */
 
@@ -91,7 +92,6 @@ nav {
     /* justify-content: space-around; */
     overflow: hidden;
     /* align-items: center; */
-  
 }
 
 
@@ -120,29 +120,6 @@ ul.nav-links li {
   font-size: 20px;
 }
 
-/*
-
-nav ul li a {
-    display: block;
-    padding: .5em 1em;
-    margin: .5em;
-    text-decoration: none;
-    color: #16302B;
-    /*float: right;*/
-/*}*/
-
-/* .nav-links {
-  
-  display: flex;
-
-  justify-content: space-around;
-
-  width: 30%;
-
-  float: right;
-
-} */
-
 .nav-links li a:hover {
     background-color: #F79256;
     color:#FCF9F9
@@ -165,20 +142,6 @@ ul.nav-linkedin-right {
     margin-left: 0;
 }
 
-/*li {
-    float: left;
-}*/
-
-/*li a {
-    text-align: center;
-}*/
-
-/*.active {
-    float: right;
-}
-
-*/
-
 /* LAYOUT */
 
 
@@ -195,103 +158,98 @@ main section ul li a {
     text-decoration: none;
 }
 
-main .left-section {
-    box-sizing:content-box;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 60px;
-    padding: 0;
+.main-container {
+        /* width: 80%; */
+        /* width: calc(100% - 200px); */
+        margin-left: 100px;
+        margin-right: 100px;
+        /* text-align: center; */
+        /* background-color: #F79256; */
+        display: grid;
+        /* grid-template-rows: repeat(4, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        /* background-color: aquamarine; */
+        /* align-items: center; */
+        gap: 8px;
+        
 }
 
-main .left-section h1 {
-    margin-bottom: .3em;
-    /* font-size: ; */
+.row-item {
+    /* background-color: #218B8B; */
+    grid-template-columns: 1fr;
+    column-gap: 30px;
 }
 
-main .left-section h2 {
-    margin-top: 0;
-    margin-bottom: .1em;
-    font-weight: 400;
+.row-item p {
+    font-size: 23px;
 }
 
-main .left-section h4 {
-    margin-top: 0;
-    font-weight: lighter;
+.two-columns {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-/* main .left-section .name {
+.column-item {
+    background-color: #F79256;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-center {
+    display: block;
+    text-align: center;
+}
+
+.bullet-styling ul { 
+    list-style: none; 
     margin: 0;
     padding: 0;
+} /* Remove default bullets */
+
+.bullet-styling li {
+    font-size: 23px;
+    padding-right: 40px;
+    /* line-height: 30px; */
+    margin-bottom: 25px;
 }
 
-main .left-section .role {
-    margin: 0;
-    padding: 0;
-} */
+.bullet-styling li::before {
+    font-family: 'Font Awesome 5 Free';
+    /* content: "\f35a"; */
+    /* content: "\25B7"; */
+    /* content: "\2970"; */
+    content: "\27B2";
+    color: #F79256;
+	
+    margin-right: 10px; /* Optional tweak */
+}
 
-main .left-section .view-my-work {
+/* .contact-links {
     display: block;
     margin: 0 0 2em 0;
     padding: 0;
-}
+} */
 
-main .left-section .view-my-work a:link {
+.contact-links a:link {
     color: #96A13A;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 45px;
     text-decoration: none;
     transition: .1s ease-in-out 0s;
 }
 
-main .left-section .view-my-work a:hover {
+.contact-links a:hover {
     color: #96A13A;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 47px;
     text-decoration: none;
 }
 
-main .left-section .view-my-work a:visited {
+.contact-links a:visited {
     color: #96A13A;
 }
 
-main .left-section .view-resume {
-    display: block;
-    margin: 0 0 2em 0;
-    padding: 0;
-}
 
-main .left-section .view-resume a:link{
-    color: #96A13A;
-    font-weight: bolder;
-    font-size: 45px;
-    text-decoration: none;
-    transition: .1s ease-in-out 0s;
-}
-
-main .left-section .view-resume a:hover{
-    color: #96A13A;
-    font-weight: bolder;
-    font-size: 47px;
-    text-decoration: none;
-}
-
-main .left-section .view-resume a:visited {
-    color: #96A13A;
-}
-
-/* main .right-section {
-    box-sizing:content-box;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-} */
-
-.home-pic {
-    width: 10px;
-    padding: 0;
-    margin: 2em 0 3em 0;
-}
 
 /* FOOTER */
 footer {
@@ -308,7 +266,6 @@ footer ul li {
 footer p {
     color:#FCF9F9;
 }
-
 
 
 
@@ -341,7 +298,8 @@ div {
 div {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
 }
 }
 
@@ -354,7 +312,8 @@ div {
 div {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
     flex-direction: row;
 }
 }
@@ -394,40 +353,98 @@ div {
 <!-- margin: 0%; padding: 1.5em;-->
 </header>
 
+
+<!-- <div class="project-header">
+Contact Me
+</div> -->
+
 <main> <!--SECTIONING ELEMENTS: div, table, main, header, footer, section, nav, sidebar, etc...-->
 
-<section class="left-section">
-    <!-- <div class="name"> -->
-    <h1>Abby Dunne</h1>
-    <!-- </div> -->
-    <!-- <div class="role"> -->
-    <h2>UX Design &<br>Developement</h2>
-    <!-- </div> -->
-    <h4>Boston, MA</h4>
+
+<div class="main-container">
 
 
-    <div class="view-my-work">
-        <a href="work.html">View my Work ></a>
-    </div>
-    <div class="view-resume">
-        <a href="resume-updated-12-24.pdf">Resume ></a>
-    </div>
+
+        <h1>Contact Me</h1>
+        <!-- <div class="img-center"> -->
+            
+        <div class="contact-links" style="text-align: center; ">
+            <h4 style="font-weight:500">Email: ald021@bucknell.edu</h4>
+
+            <h3><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn">LinkedIn ></a></h3>
+        
+            <h3><a href="https://bucknell.joinhandshake.com/stu/users/24372737" >Handshake ></a></h3>
+        
+            <h3><a href="resume-updated-12-24.pdf" >Resume ></a></h3>
+            </div>
+        <!-- </div> -->
+        <!-- <div class="row-item">
+            <div class="two-columns">
+
+                <div class="contact-links">
+
+                    <h3><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn">LinkedIn ></a></h3>
+                
+                    <h3><a href="https://bucknell.joinhandshake.com/stu/users/24372737" >Handshake ></a></h3>
+                
+                    </div>
+                    <div class="contact-links">
+
+                        <h3><a href="resume-updated-12-24.pdf" >Resume ></a></h3>
+
+                        <h3><a href="https://bucknell.joinhandshake.com/stu/users/24372737" >Email ></a></h3>
+                    
+                        </div>
+             
+            </div>
+        </div> -->
+        
+        <!-- <h3>Email:</h3>
+        <p>ald021@bucknell.edu</p> -->
+
     
-    <!-- <ul>
-    <li><a href="contact.html"><img src="https://i.ibb.co/MCwTsSy/main-contact-button.png" alt="main-contact-button" border="0" width="194px" padding=".5em" margin="1em"></a></li>
-    <li><a href="resume.pdf"><img src="https://i.ibb.co/kBkM6nP/main-resume-btn.png" alt="main-resume-btn" border="0" width="194px" padding=".5em" margin="1em"></a></li>
-    </ul> -->
+        <!-- <div class="contact-links">
+
+        <h3><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn">LinkedIn ></a></h3>
+    
+        <h3><a href="https://bucknell.joinhandshake.com/stu/users/24372737" >Handshake ></a></h3>
+    
+        <h3><a href="resume-updated-12-24.pdf" >Resume ></a></h3>
+        </div> -->
 
 
-</section>
+    <!-- <div class="four-rows"> -->
+        <!-- <div class="row-item">
+            row
+        </div>
+        <div class="row-item">
+            row
+        </div>
+        <div class="row-item">
+            row
+        </div>
+        <div class="row-item">
+            <div class="two-columns">
 
-<!-- <section class="right-section"> -->
-<section>
-<!--<section style="width: 400px;">-->
-    <div class="home-pic">
-    <img src="images/home_pic.jpg" alt="Home Graphic" border="0" style="height:35em">
+                <div class="contact-links">
+
+                    <h3><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn">LinkedIn ></a></h3>
+                
+                    <h3><a href="https://bucknell.joinhandshake.com/stu/users/24372737" >Handshake ></a></h3>
+                
+                    </div>
+                    <div class="contact-links">
+
+                        <h3><a href="resume-updated-12-24.pdf" >Resume ></a></h3>
+
+                        <h3><a href="https://bucknell.joinhandshake.com/stu/users/24372737" >Email ></a></h3>
+                    
+                        </div>
+             
+            </div>
+        </div> -->
+    <!-- </div> -->
 </div>
-</section>
 
 </main>
 
