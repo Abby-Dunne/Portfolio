@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Designathon</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* CSS GENERAL STRUCTURE */
+html { 
+    font-size: 100%;
+}
+
+/* CSS RESET */
+
+/* GLOBAL STYLES */
+
+body {
+    font-family:'Manrope', sans-serif;
+    background-color: #FCF9F9;
+}
+
+main {
+    background-color: #FCF9F9;
+    width: 100%;
+    display: flex;
+}
+
+section {
+    background-color: #FCF9F9;
+    box-sizing:content-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+    margin: 50px;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+}
+h1 {
+    color: #F79256;
+    /*font-size: 5em;  /* Relative unit */
+    font-size: 3em;
+    /* rem - srespond to the root element */
+    padding: 0%;
+}
+
+h2 {
+    font-size: 40px;
+    color: #132A25;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 25px;
+    color: #218B8B;
+}
+
+p {
+    font-size: 1em;
+}
+
+.project-header {
+    color: #F79256;
+    font-size: 55px;
+    text-align: left;
+    font-style: italic;
+    margin-left: 100px;
+}
+
+/* HEADER AND MAIN NAVIGATION */
+
+nav {
+    background-color: #FCF9F9;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+    overflow: hidden;
+    /* align-items: center; */
+}
+
+
+ul.nav-links {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  margin-right: 1em;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FCF9F9;
+}
+
+ul.nav-links li {
+  float: left;
+}
+
+.nav-links li a {
+  display: block;
+  color: #16302B;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  margin-top: 1.5em;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+}
+
+.nav-links li a:hover {
+    background-color: #F79256;
+    color:#FCF9F9
+}
+
+.nav-logo-left {
+    flex: 1 1 200px;
+    list-style: none;
+    margin-top: 2em;
+    margin-left: 3em;
+    padding: 0;
+}
+
+ul.nav-linkedin-right {
+    list-style: none;
+    float: right;
+    padding: .5em;
+    margin-top: 2.5em;
+    margin-right: 4em;
+    margin-left: 0;
+}
+
+/* LAYOUT */
+
+
+main section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main section ul li a {
+    display: block;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+.main-container {
+        /* width: 80%; */
+        /* width: calc(100% - 200px); */
+        margin-left: 100px;
+        margin-right: 100px;
+        /* text-align: center; */
+        /* background-color: #F79256; */
+        display: grid;
+        /* grid-template-rows: repeat(4, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        /* background-color: aquamarine; */
+        /* align-items: center; */
+        gap: 8px;
+        
+}
+
+.row-item {
+    /* background-color: #218B8B; */
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+}
+
+.row-item p {
+    font-size: 23px;
+}
+
+.two-columns {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column-item {
+    background-color: #F79256;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-center {
+    display: block;
+    text-align: center;
+}
+
+.bullet-styling ul { 
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+} /* Remove default bullets */
+
+.bullet-styling li {
+    font-size: 23px;
+    padding-right: 40px;
+    /* line-height: 30px; */
+    margin-bottom: 25px;
+}
+
+.bullet-styling li::before {
+    font-family: 'Font Awesome 5 Free';
+    /* content: "\f35a"; */
+    /* content: "\25B7"; */
+    /* content: "\2970"; */
+    content: "\27B2";
+    color: #F79256;
+	
+    margin-right: 10px; /* Optional tweak */
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #F79256;
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer p {
+    color:#FCF9F9;
+}
+
+
+
+/* PAGE SPECIFIC */
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:420px) {
+    main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    width: 100%;
+    display: grid;
+    /*grid-template-rows: 1fr;*/
+    flex-direction: row;
+}
+}
+
+@media screen and (min-width:768px) {
+    main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+div {
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+}
+}
+
+@media screen and (min-width:1366px) {
+    main {
+    width: 100%;
+    display: flex;
+}
+
+div {
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    flex-direction: row;
+}
+}
+
+</style>
+
+<body>
+
+<header>
+
+<!--use flex box for nav bar-->
+<nav>
+
+    
+        <!-- <div class="nav-logo-left">
+        <a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="83px"></a>
+        </div> -->
+        <ul class="nav-logo-left">
+        <li><a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="83px"></a>
+        </ul>
+        <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+    <ul class="nav-linkedin-right">
+        <li><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/TKcDh09/orange-linkedin.png" alt="orange-linkedin" border="0" width="28px"></a></li>
+        </ul>
+        <!-- <div class="nav-linkedin-right">
+        <a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/TKcDh09/orange-linkedin.png" alt="orange-linkedin" border="0" width="28px"></a>
+        </div> -->
+    
+</nav>
+
+
+<!-- margin: 0%; padding: 1.5em;-->
+</header>
+
+<!-- <h3 class="project-header">Designathon</h3> -->
+<div class="project-header">
+Fitbox45 Website Design
+</div>
+
+<main> <!--SECTIONING ELEMENTS: div, table, main, header, footer, section, nav, sidebar, etc...-->
+
+
+<div class="main-container">
+    <!-- <div class="four-rows"> -->
+        <div class="row-item">
+            <p><b>ROLE: </b> website designer <br><br> <b>TEAM: </b> a ux lead, business lead, other UI designer<br><br> <b>COMPANY: </b> EnticEdge</p>
+            <!-- <img src="./images/FLAG_intro_pic1.png" style="width:100%; margin: 20px 0px"> -->
+            <!-- <div> </div> -->
+            <p><b>GOAL:</b> Design a user-friendly, organized website for clients’ boxing training services</p>
+            <!-- <h3>TEAM: 3 students</h3>
+             <h3>COMPANY: FreeLittleArtGalleries of the Susquehanna Valley</h3> -->
+            <!-- <h3>GOAL: In a two-week design sprint, help Union County Connect get ready to launch their three FLAGS (Free Little Art Galleries) in the Susquehanna Valley, by proposing branding and logo, a landing page with informational content about the FLAGS, and informational and promotional materials for print and social media.</h3> -->
+
+        </div>
+        <div class="row-item">
+            <h2>Process</h2>
+            <p>Since the client wanted to use Wix website builder, I researched the prices and looked at various templates for gym websites to get an idea of what is typically included.
+                We had an initial meeting with a client to figure out the pricing plan and to discuss potential content for the page. 
+                </p>
+                <div class="img-center"><img src="./images/fbx45_hierarchy.png" style="width: 50%"></div>
+            <p>We figured out a page hierarchy first. To generate ideas I sketched out some possible layouts on paper before proceeding to digital designs. I then created low-fi digital wireframes in Figma (this was my first time creating a digital wireframe).
+            </p>
+            <div class="img-center"><img src="./images/fbx45_wireframes.png" style="width: 50%"></div>
+            
+            <p>Once we had the wireframe layouts, we had a meeting with the client to discuss the designs and make any changes or redesigns before going forward. I wanted to know what information they thought was most important for the homepage.
+            </p>
+           
+            <p>The lead UI / graphic designer proposed color schemes for the websites and we discussed them with the lead ux designer. We ended up using both the red and yellow as accent colors as it gave a more distinct brand. 
+            </p>
+            <div class="img-center"><img src="./images/fbx45_colors.png" style="width:40%"></div>
+            <p> We applied the color scheme to the layouts to produce some high-fidelity designs.</p>
+            <div class="img-center"><img src="./images/fbx45_colorwireframes.png" style="width: 70%"></div>
+            <p>Once we had them it was time to prototype the navigation in figma so we could have a working model of the website to show the client the final design before it is ready to publish. The client approved, and it was ready to publish on wix. My work here was done.</p>
+        </div>
+        <div class="row-item">
+            <h2>Outcome</h2>
+            <p>A refreshed website that provides booking services, a shopping platform, and information on the training facility and staff.
+            </p>
+            <p style="font-style:italic; font-size: 20px">Here is the final website: <a href="https://www.fbx45.com/" target="_blank" rel="noopener noreferrer">https://www.fbx45.com/</a></p>
+            <div class="img-center"><img src="./images/fitbox45_desktop1.png" style="width: 70%"></div>
+            <div class="img-center"><img src="./images/fitbox45_desktop2.png" style="width:70%"></div>
+            <div class="img-center"><img src="./images/fitbox45_desktop3.png" style="width:70%"></div>
+            <div><p><br></p></div>
+        </div>
+        <div class="row-item">
+            <div class="two-columns">
+                <div class="bullet-styling">
+            <ul>
+                <p><b>CHALLENGES</b></p>
+                <li>Sometimes it was hard to get in touch with client when there were important questions for design decisions; so I had to improvise and come up with content (including some writing) that I thought would match what the client was looking for</li>
+            </ul>
+            <!-- <p> - Time constraints: getting all of the deliverables done in two weeks was difficult, and it meant that not everything was going to be perfect and we had to rush the design process and skip steps.
+            <br> - Working with a team and making design decisions together is not always easy when everyone has different opinions on what we think looks best. When you're not basing designs off of user research and using that as reasoning, you may have to do some negotiating and keep an open mind to work as a team. </p> -->
+            </div>
+            <div class="bullet-styling">
+                <ul>
+                    <p><b>SKILLS I GAINED / LESSONS</b></p>
+                    <li>Wireframing and prototyping in Figma</li>
+                    <li> it is better to make changes early and often before too far into design process</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+
+<!-- <div class="two-columns">
+                <div>ROLE TEAM COMPANY</div>
+                <div>GOAL</div> -->
+
+    <!-- <div class="main-row">
+        <p>hello</p>
+    </div>
+    <div class="main-row">
+        <p>hello</p>
+    </div>
+    <div class="main-row">
+        <p>hello</p>
+    </div>
+    <div class="main-row">
+        <p>hello</p>
+    </div>
+</div> -->
+
+</main>
+
+<!-- <footer>
+    <ul>
+    <li><a href="index.html"><img src="https://i.ibb.co/RpYg9MD/ad-logo-dark.png" alt="ad-logo-dark" border="0" width="137px" style="padding: 1em;"></a></li>
+    <li><a href="https://www.linkedin.com/in/abby-dunne-b731b8234/LinkedIn"><img src="https://i.ibb.co/GnV03mj/linkedin-white.png" alt="linkedin-white" border="0" width="46px"></a></li>
+</ul>
+
+<p>ald021@bucknell.edu</p>
+
+
+</footer> -->
+
+</body>
+
+</head>
+
+
+</html>
